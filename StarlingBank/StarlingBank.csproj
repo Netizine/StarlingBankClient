@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>StarlingBank</AssemblyName>
+    <Version>1.1.0.0</Version>
+    <Authors>James Melvin</Authors>
+    <Company>Netizine</Company>
+    <Product>Starling Bank .NET Standard SDK</Product>
+    <Copyright>Copyright ©  2021</Copyright>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Description>An unofficial C# .NET Standard SDK for Starling Bank's API.</Description>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageIcon>logo.png</PackageIcon>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>StarlingBank</PackageId>
+    <PackageProjectUrl>https://github.com/Netizine/StarlingBankClient</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Netizine/StarlingBankClient</RepositoryUrl>
+    <RootNamespace>StarlingBank</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Services\Http\**" />
+    <EmbeddedResource Remove="Services\Http\**" />
+    <None Remove="Services\Http\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Client.cs" />
+    <Compile Remove="IClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="9.5.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+</Project>
